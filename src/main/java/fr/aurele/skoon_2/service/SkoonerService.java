@@ -11,7 +11,7 @@ public interface SkoonerService {
 
     Optional<Skooner> findById(Integer id);
     /*Optional<Skooner> findByPseudo(String pseudo);*/
-    List<Skooner> findAll(String search);
+    List<Skooner> findAll();
     Skooner insert(Skooner skooner);
     Skooner update(Integer id, Skooner skooner);
     void delete(Integer id);

@@ -14,7 +14,7 @@ public class SkoonerServiceImpl implements SkoonerService {
     private SkoonerRepo skoonerRepo;
 
     @Override
-    public List<Skooner> findAll(String search) {
+    public List<Skooner> findAll() {
         return skoonerRepo.findAll();
     }
 

@@ -13,7 +13,7 @@ import org.springframework.web.bind.annotation.*;
 
 
 @RestController
-@RequestMapping("/skoon_2")
+@RequestMapping("/skooner")
 public class SkoonerController {
 
     @Autowired
@@ -22,10 +22,10 @@ public class SkoonerController {
 
     @CrossOrigin
     @GetMapping("/skooners")
-    public ResponseEntity<List<Skooner>> getAllSkooner(@RequestParam(value = "search", defaultValue = "") String search) {
+    public ResponseEntity<List<Skooner>> getAllSkooner() {
         List<Skooner> listSkooner;
         try {
-            listSkooner = service.findAll(search);
+            listSkooner = service.findAll();
         } catch (Exception e) {
             return ResponseEntity.notFound().build();
         }
